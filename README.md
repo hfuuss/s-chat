@@ -31,69 +31,69 @@ mongodb版本： v3.2.10
 
 # 文件目录结构：
 
-│  index.js       文件入口
-│  package.json   npm包管理配置文件
-│  README.md
-│  test.js        分词测试文件
-│  wechat.js      微信通信文件，AI文件接口
-│  wordCut.js     分词文件
-│  
-├─config
-│      default.js 默认配置文件
-│      
-├─db              数据库目录
+│  index.js       文件入口  
+│  package.json   npm包管理配置文件  
+│  README.md  
+│  test.js        分词测试文件  
+│  wechat.js      微信通信文件，AI文件接口  
+│  wordCut.js     分词文件  
+│    
+├─config  
+│      default.js 默认配置文件  
+│        
+├─db              数据库目录  
 │          
-├─lib
-│      mongo.js    collection定义文件
-│      
-├─logs				日志文件
+├─lib  
+│      mongo.js    collection定义文件  
+│        
+├─logs				日志文件  
 │      error.log    
-│      success.log
+│      success.log  
 │      
-├─middlewares        中间件，坚持用户是否登录
-│      check.js
+├─middlewares        中间件，坚持用户是否登录  
+│      check.js  
 │      
-├─models            collection的操作方法(CURD)
-│      message.js
-│      users.js
+├─models            collection的操作方法(CURD)   
+│      message.js  
+│      users.js  
 │          
-├─node_modules       npm模块
+├─node_modules       npm模块  
 │  
 │              
-├─public            静态文件等
-│  ├─css
-│  │      style.css
+├─public            静态文件等  
+│  ├─css  
+│  │      style.css  
 │  │      
-│  └─img
+│  └─img  
 │         
-├─routes			路由文件
-│      index.js
-│      list.js
-│      signin.js
-│      signout.js
-│      signup.js
+├─routes			路由文件  
+│      index.js  
+│      list.js  
+│      signin.js  
+│      signout.js  
+│      signup.js  
 │      
 │      
-├─tuling              图灵接口
-│      turingRobot.js
+├─tuling              图灵接口  
+│      turingRobot.js  
 │      
-└─views               视图文件
-    │  404.ejs
-    │  create.ejs
-    │  edit.ejs
-    │  error.ejs
-    │  footer.ejs
-    │  header.ejs
-    │  list.ejs
-    │  signin.ejs
-    │  signup.ejs
+└─views               视图文件  
+    │  404.ejs  
+    │  create.ejs  
+    │  edit.ejs  
+    │  error.ejs  
+    │  footer.ejs  
+    │  header.ejs  
+    │  list.ejs  
+    │  signin.ejs  
+    │  signup.ejs  
     │  
-    ├─components
-    │      comments.ejs
-    │      nav-setting.ejs
-    │      nav.ejs
-    │      notification.ejs
-    │      post-content.ejs
+    ├─components  
+    │      comments.ejs  
+    │      nav-setting.ejs  
+    │      nav.ejs  
+    │      notification.ejs  
+    │      post-content.ejs  
 
 
 
