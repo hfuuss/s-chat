@@ -1,0 +1,45 @@
+<%- include('header') %>
+
+
+<a href="/list/create">
+<button class="ui positive button">添加指令 </button>
+</a>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>指令id</th>
+      <th>指令名称</th>
+      <th>描述</th>
+      <th>内容</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% msgs.forEach(function (msg,index) { %>
+       <tr>
+          <td><%= index+1 %></td>
+          <td><%= msg.command %></td>
+          <td><%= msg.descripition %></td>
+          <td><%= msg.content %></td>
+            <td>  
+              <div class="ui buttons">
+                   <a href="/list/<%= msg._id %>/edit">
+                    <button class="ui positive button">
+                     编辑
+                    </button>
+                  </a>
+              <div class="or"></div>
+                 <a href="/list/<%= msg._id %>/remove">
+                      <button class="ui positive button">
+                      删除
+                      </button>
+                  </a>
+               
+              </div>
+            </td>
+       </tr>
+    <% }) %>
+  </tbody>
+</table>
+<%- include('footer') %>

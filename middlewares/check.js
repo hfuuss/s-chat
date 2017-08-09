@@ -1,7 +1,7 @@
 module.exports = {
     checkLogin: function checkLogin(req, res, next) {
         if (!req.session.user) {
-            req.flash('error', 'δ��¼');
+            req.flash('error', '用户没有登录');
             return res.redirect('/signin');
         }
         next();
@@ -9,8 +9,8 @@ module.exports = {
 
     checkNotLogin: function checkNotLogin(req, res, next) {
         if (req.session.user) {
-            req.flash('error', '�ѵ�¼');
-            return res.redirect('back');//����֮ǰ��ҳ��
+            req.flash('error', '用户已登录');
+            return res.redirect('back');//·µ»ØÖ®Ç°µÄÒ³Ãæ
         }
         next();
     }

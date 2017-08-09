@@ -16,10 +16,10 @@ router.get('/', checkNotLogin, function(req, res, next) {
 
 // POST /signup 用户注册
 router.post('/', checkNotLogin, function(req, res, next) {
+  
     var name = req.fields.name;
     var gender = req.fields.gender;
     var bio = req.fields.bio;
-    var avatar = req.files.avatar.path.split(path.sep).pop();
     var password = req.fields.password;
     var repassword = req.fields.repassword;
 
@@ -33,9 +33,6 @@ router.post('/', checkNotLogin, function(req, res, next) {
         }
         if (!(bio.length >= 1 && bio.length <= 30)) {
             throw new Error('个人简介请限制在 1-30 个字符');
-        }
-        if (!req.files.avatar.name) {
-            throw new Error('缺少头像');
         }
         if (password < 6) {
             throw new Error('密码至少 6 个字符');
@@ -57,7 +54,6 @@ router.post('/', checkNotLogin, function(req, res, next) {
         password: password,
         gender: gender,
         bio: bio,
-        avatar: avatar
     };
     // 用户信息写入数据库
     UserModel.create(user)
@@ -70,7 +66,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
             // 写入 flash
             req.flash('success', '注册成功');
             // 跳转到首页
-            res.redirect('/posts');
+            res.redirect('/list');
         })
         .catch(function (e) {
             // 用户名被占用则跳回注册页，而不是错误页

@@ -3,7 +3,7 @@
 <div class="ui grid">
     <div class="four wide column"></div>
     <div class="eight wide column">
-        <form class="ui form segment" method="post" enctype="multipart/form-data">
+        <form class="ui form segment" method="post" action='/signup'>
             <div class="field required">
                 <label>用户名</label>
                 <input placeholder="用户名" type="text" name="name">
@@ -23,10 +23,6 @@
                     <option value="f">女</option>
                     <option value="x">保密</option>
                 </select>
-            </div>
-            <div class="field required">
-                <label>头像</label>
-                <input type="file" name="avatar">
             </div>
             <div class="field required">
                 <label>个人简介</label>
