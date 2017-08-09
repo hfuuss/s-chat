@@ -132,3 +132,6 @@ pc端指令详情编辑页面
 ![](http://images.hfuusec.cn/17-8-9/8656101.jpg)
 pc端离线测试页面
 ![](http://images.hfuusec.cn/17-8-9/93960214.jpg)
+
+# 协议
+LGPL
